@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+    backend:
+        image: rd2-chat-image:latest
+        volumes:
+            - ./src:/usr/src/app/src
+            - ./.env:/usr/src/app/.env
+        ports:
+            - 8002:8002
+        # depends_on:
+        #     - mongodb
+        # networks:
+        #     - terry_network
+
+    # mongodb:
+    #     image: mongo:5.0.16
+    #     environment:
+    #         - MONGO_INITDB_ROOT_USERNAME=terry
+    #         - MONGO_INITDB_ROOT_PASSWORD=6c0tQ0FqIeaBYN5K8EsD
+    #     volumes:
+    #         - mongodb_data:/data/db
+    #     ports:
+    #         - 2011:27017  #enable port only for required ip's
+        # networks:
+        #     - terry_network
+
+# volumes:
+#     mongodb_data:
+
+# networks:
+#     terry_network:
