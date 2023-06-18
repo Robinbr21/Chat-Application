@@ -1,4 +1,7 @@
 import Utils from "../util/Mongouplod";
+const jwt = require('jsonwebtoken');
+const { jwtSecret } = require('../config/config');
+
 
 exports.login = async(req,res) =>{
     try {
@@ -6,7 +9,8 @@ exports.login = async(req,res) =>{
         if(username != "" && password != ""){
             let resp = await Utils.Sign(username,password)
             if(resp){
-                return res.json({status: true ,message:"Succesfully loged in"})
+                const token = jwt.sign({ user: username }, jwtSecret.jwtSecret);
+                return res.json({status: true ,message:"Succesfully loged in",token: token})
             }else{
                 return res.json({status: false , message:"Invalid Credentials"})
             }

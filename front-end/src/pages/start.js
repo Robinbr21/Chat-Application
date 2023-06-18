@@ -14,8 +14,9 @@ function Login() {
     e.preventDefault();
     try {
       const response = await APIConfiguration.API.post("/login", credentials);
-      console.log(response.data.status); // Handle the response data
+      // console.log(response.data.token); // Handle the response data
       if (response.data.status) {
+        localStorage.setItem('token', response.data.token);
         navigate('/chat')
       } else {
         setSubmitError(true);

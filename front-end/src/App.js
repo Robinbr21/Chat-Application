@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 // import Login from './view/start'
 import Routing from './Route/routing';

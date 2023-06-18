@@ -19,3 +19,7 @@ exports.closeConnection = async () => {
   await mongoose.connection.close();
   console.log(`MongoDB disconnected`);
 };
+
+exports.jwtSecret = {
+  jwtSecret: 'abraka-dabra',
+};

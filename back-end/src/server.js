@@ -1,8 +1,6 @@
 require("dotenv").config();
 import cors from "cors";
 import routes from "./routes";
-import auth from "./middleware/Auth";
-import { Socket } from "socket.io-client";
 
 const express = require("express");
 const app = express();
@@ -14,6 +12,7 @@ const io = new Server(server);
 const PORT = process.env.PORT;
 const Utils = require("./util/Mongouplod");
 const DB = require("./config/config");
+
 
 // const crypto = require("crypto");
 // const randomId = () => crypto.randomBytes(8).toString("hex");
