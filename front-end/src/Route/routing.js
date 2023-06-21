@@ -15,7 +15,6 @@ import UseAuth from '../Hooks/useAuth'
 
 function Routing() {
     const IsAuth = UseAuth()
-    console.log("============>>>",UseAuth());
     return (
         <Router>
             <Routes>

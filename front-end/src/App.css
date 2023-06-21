@@ -10,7 +10,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('D:\Workspace\NodeWorkspace\Chat-System\front-end\public\background.avif');
+  background-image: url('D:\Robin Workspace\Chat-Application\front-end\public\background.avif');
   background-size: cover;
   filter: blur(2px); /* Adjust the blur value as desired */
   z-index: -1;

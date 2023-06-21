@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 function UseAuth() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState( localStorage.getItem('token') ? true : false);
 
   useEffect(() => {
 
@@ -9,8 +9,7 @@ function UseAuth() {
     const userIsAuthenticated = token ? true : false;
 
     setIsAuthenticated(userIsAuthenticated);
-  }, []);
-
+  }, [isAuthenticated]);
   return isAuthenticated
 }
 

@@ -14,7 +14,7 @@ function Chat() {
     // });
 
     useEffect(() => {
-        console.log("haiiiiii");
+        // console.log("haiiiiii");
         // Listen for incoming messages
         socket.on('new message', (message) => {
             console.log(">>>>>>>>>>>>",message);
